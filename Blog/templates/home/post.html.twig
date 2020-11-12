@@ -7,18 +7,17 @@
 
 	<div class="container">
 		<div class="row">
-				<div class="col-md-4">
-					<div class"card">
+				<div class="col-md-6">
+					
 						<img src="https://via.placeholder.com/150C/O https://placeholder.com/" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">{{post.title}}</h5>
+						
+							<h1>{{post.title}}</h1>
 							<p class="card-text">{{post.content}}</p>
 							<p>{{post.author}} - 
 							{{post.createdAt | date("d/m/Y")}}</p>
                       
-							<a href="/posts/{{post.id}}" class="btn btn-primary">Go somewhere</a>
+							<a class="btn btn-primary" href="/home">Retour</a>
 						</div>
-					</div>
 			</div>
 		</div>
 	{% endblock %}
