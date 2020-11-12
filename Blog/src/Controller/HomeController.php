@@ -16,14 +16,13 @@ class HomeController extends AbstractController
     {
 
         $post = new Post();
-        $post->setTitle('Titre 1')
-        ->setContent('salut')
-        ->setAuthor('julien')
-        ->setCreatedAt(new \DateTime());
-
+        $post->setTitle('titre 1')
+            ->setContent('salut')
+            ->setAuthor('Julien')
+            ->setCreatedAt(new \DateTime());
 
         return $this->render('home/index.html.twig', [
-            'controller_name' => 'Julien',
+            'controller_name' => 'HomeController',
             "post" => $post
         ]);
     }
