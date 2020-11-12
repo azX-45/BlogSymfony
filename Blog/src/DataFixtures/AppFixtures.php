@@ -1,32 +1,29 @@
 <?php
 
 namespace App\DataFixtures;
-use\App\Entity\User;
+use\App\Entity\Post;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
-use Faker;
+use Faker\Factory;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 class AppFixtures extends Fixture
 {   
-    private $encoder;
-
-    public function __construct(UserPasswordEncoderInterface $encoder){
-      $this->encoder =$encoder;
-    }
 
     public function load(ObjectManager $manager)
     {
         // $product = new Product();
         // $manager->persist($product);
-        $generator = Faker\Factory::create("fr_FR");
-        for($i =0 ; $i < 20 ; $i++){
-          $user = new User();
-          $password =$this->encoder->encodePassword($user , 'password');
-          $user->setFirstName($generator->firstName())
-            ->setlastName($generator->lastName)
-            ->setEmail($generator->email)
-            ->setPassword($password);
-          $manager->persist($user);       
+        $faker =Factory::create('fr_FR');
+
+        for ($i = 0; $i <10; $i++){
+        $post = new Post();
+        $post->setTitle($faker->sentence($nbWords = 2, $variableNbWords = true))
+            ->setContent($faker->sentence($nbWords = 10, $variableNbWords = true))
+            ->setAuthor($faker->name())
+            ->setCreatedAt($faker->dateTimeBetween('-6 months'));
+
+            $manager->persist($post);
+          
         }
         $manager->flush();
     }
