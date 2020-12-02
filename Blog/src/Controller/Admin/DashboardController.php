@@ -24,7 +24,7 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('Blog Carnassier');
+            ->setTitle('AdminCrud');
     }
 
     public function configureMenuItems(): iterable
@@ -35,3 +35,4 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Commentaire', 'fas fa-pen', Comment::class);
     }
 }
+
