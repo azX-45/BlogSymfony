@@ -1,0 +1,61 @@
+img {
+  width: 1903px;
+}
+
+.col-lg-12 {
+  margin-top: -530px;
+}
+
+#content {
+  margin-top: 50px;
+}
+
+.card {
+  margin-top: 100px;
+}
+
+body {
+  background-image: url(../img/fond.jpg);
+}
+
+.box-container {
+  width: 400px;
+  height: 100px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.box {
+  width: 170px;
+  height: 92px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.d-flex{
+  margin-top: 328px;
+}
+
+.col-sm-6{
+  max-width: 35%;
+
+}
+
+#city {
+  background-color: rgba(3, 120, 199, 0.75);
+}
+
+#temp {
+  background-color: rgba(3, 98, 161, 0.75);
+}
+
+#humidity {
+  background-color: rgba(2, 72, 119, 0.75);
+}
+
+#wind {
+  background-color: rgba(0, 45, 75, 0.75);
+}

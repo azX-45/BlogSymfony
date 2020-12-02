@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -40,7 +41,8 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=255)
      */
     private $firstName;
-
+    
+    
     /**
      * @ORM\Column(type="string", length=255)
      */
