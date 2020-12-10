@@ -4,38 +4,40 @@
 {% endblock %}
 
 {% block body %}
-<div class="container">
 
-    <div class="row">
-        <div class="col-md-10">
-            <img src="https://via.placeholder.com/150C/O https://placeholder.com/" class="card-img-top" alt="...">
-            <h1>{{post.title}}</h1>
-            <p class="card-text">{{post.content}}</p>
-            <p> {{post.createdAt | date("d/m/Y")}}</p>
+	<div class="container">
 
-            <a class="btn btn-primary" href="/">Retour</a>
-        </div>
-    </div>
-    <div class='row'>
-        <div class='col-md-3'>
-            {{ form(form) }}
-        </div>
-        <div class="col-md-9">
-            {% for comment in post.comments %}
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">{{comment.pseudo}}</h5>
-                    <h6 class="card-subtittle mb-2 text-mutted">{{comment.createdAt | date('d/m/Y')}}</h6>
-                    <p class="card-text">{{comment.content}}</p>
-                </div>
-            </div>
+		<div class="row">
+			<div class=" offset-md-2 col-md-8 offset-sm-1 col-sm-10 mt-3 pb-3 card shadow bg-light mb-3">
+				<img src="https://via.placeholder.com/150C/O https://placeholder.com/" class="card-img-top" alt="...">
+				<h1>{{post.title}}</h1>
+				<p class="card-text">{{post.content|raw}}</p>
+				<p>
+					{{post.createdAt | date("d/m/Y")}}</p>
 
-            {% endfor %}
+				<a class="btn btn-primary" href="/">Retour</a>
+			</div>
+		</div>
+		<div class='row'>
+			<div class=" offset-md-2 col-md-8 offset-sm-1 col-sm-10 mt-3 pb-3 card shadow bg-light mb-3">
+				{{ form(form) }}
+				</div>
+				{% for comment in post.comments %}
+					<div class=" offset-md-2 col-md-8 offset-sm-1 col-sm-10 mt-3 pb-3 card shadow bg-light mb-3">
+						<div class="card-body ">
+							<h5 class="card-title">{{comment.pseudo}}</h5>
+							<h6 class="card-subtittle mb-2 text-mutted">{{comment.createdAt | date('d/m/Y')}}</h6>
+							<p class="card-text">{{comment.content}}</p>
+						</div>
+					</div>
 
-        </div>
-    </div>
+				{% endfor %}
 
-{% endblock %}
+			</div>
+		</div>
+
+	{% endblock %}
+
 
 
 
