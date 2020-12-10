@@ -8,6 +8,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\SlugField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
@@ -24,6 +25,7 @@ class PostCrudController extends AbstractCrudController
     {
         return [
             TextField::new('title', 'Titre'),
+            TextareaField::new('intro', 'Introduction'),
             TextEditorField::new('content', 'Contenu'),
             DateField::new('createdAt', 'Crée le'),
             SlugField::new('slug', 'label')->setTargetFieldName('title')->hideOnIndex(),
