@@ -6,7 +6,7 @@
     {% for flashError in app.flashes('verify_email_error') %}
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
-    <div class=" offset-md-2 col-md-8 offset-sm-1 col-sm-10 mt-3 pb-3 card shadow bg-light mb-3">
+    <div class=" offset-md-2 col-md-8 offset-sm-1 col-sm-10 mt-6 pb-3 card shadow bg-light mb-3">
     <h1>Créer un compte</h1>
 
         {{ form_start(registrationForm) }}
