@@ -34,7 +34,7 @@
         </div>
       </div>
     </div>
-    <script src="js/app.js"></script>
+    
 
 	<div class="container">
 		<div class="row">
@@ -45,7 +45,7 @@
 							<h5 class="card-title">{{post.title}}</h5>
 							<p class="card-text">{{post.intro}}</p>
 							<p> {{post.createdAt | date("d/m/Y")}}</p>
-							<a href="/posts/{{post.slug}}" class="btn btn-primary">Lire l'article</a>
+							<a href="{{ path('show_post', { slug: post.slug }) }}" class="btn btn-primary">Lire l'article</a>
 						</div>
 					</div>
 
@@ -53,6 +53,10 @@
 			</div>
 		</div>
 	{% endblock %}
+  {% block javascripts %}
+  {{parent()}}
+  <script src="js/app.js"></script>
+  {% endblock %}
 
 
 

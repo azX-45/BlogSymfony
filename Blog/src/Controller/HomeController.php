@@ -27,7 +27,7 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/posts/{slug}", name="show_post")
+     * @Route("/articles/{slug}", name="show_post")
      */
     public function show(Post $post, Request $request, EntityManagerInterface $em)
     {
