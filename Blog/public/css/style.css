@@ -3,19 +3,19 @@ img {
 }
 
 .col-lg-12 {
-  margin-top: -530px;
+  margin-top: -437px;
 }
 
 #content {
   margin-top: 50px;
 }
 
-.card {
-  margin-top: 100px;
+p {
+  color: blue;
 }
 
-body {
-  background-image: url(../img/fond.jpg);
+.card {
+  margin-top: 100px;
 }
 
 .box-container {
@@ -35,11 +35,11 @@ body {
   color: white;
 }
 
-.d-flex{
+.d-flex {
   margin-top: 422px;
 }
 
-.col-sm-6{
+.col-sm-6 {
   max-width: 35%;
 
 }
@@ -59,3 +59,44 @@ body {
 #wind {
   background-color: rgba(0, 45, 75, 0.75);
 }
+
+.required {
+
+  width: 100%;
+  margin-top: 5px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+}
+
+#registration_form_email {
+  padding: 5px 0px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 97%;
+}
+
+#registration_form_firstName {
+  padding: 5px 0px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 97%;
+}
+
+#registration_form_plainPassword {
+  padding: 5px 0px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 97%;
+}
+
+#registration_form_lastName {
+  padding: 5px 0px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 97%;
+
+}
+

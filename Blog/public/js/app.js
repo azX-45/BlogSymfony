@@ -18,9 +18,9 @@ let apiCall = function (city) {
     )
     .catch((err) => console.log('Erreur : ' + err));
 };
-navigator.geolocation.getCurrentPosition((position) =>{
-  console.log(position.coords.latitude, position.coords.longitude);
-});
+//navigator.geolocation.getCurrentPosition((position) =>{
+  //console.log(position.coords.latitude, position.coords.longitude);
+//});
 //Ecouteur d'evenement formulaire
 document.querySelector('form').addEventListener('submit', function (e) {
   e.preventDefault();
