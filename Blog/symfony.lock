@@ -105,17 +105,26 @@
     "egulias/email-validator": {
         "version": "2.1.23"
     },
+    "friendsofphp/proxy-manager-lts": {
+        "version": "v1.0.2"
+    },
     "fzaninotto/faker": {
         "version": "v1.9.1"
+    },
+    "laminas/laminas-code": {
+        "version": "3.4.1"
+    },
+    "laminas/laminas-eventmanager": {
+        "version": "3.3.0"
+    },
+    "laminas/laminas-zendframework-bridge": {
+        "version": "1.1.1"
     },
     "monolog/monolog": {
         "version": "2.1.1"
     },
     "nikic/php-parser": {
         "version": "v4.10.2"
-    },
-    "ocramius/proxy-manager": {
-        "version": "2.2.3"
     },
     "php": {
         "version": "7.3"
@@ -543,11 +552,5 @@
     },
     "webmozart/assert": {
         "version": "1.9.1"
-    },
-    "zendframework/zend-code": {
-        "version": "3.4.1"
-    },
-    "zendframework/zend-eventmanager": {
-        "version": "3.2.1"
     }
 }
