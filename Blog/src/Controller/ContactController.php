@@ -31,6 +31,8 @@ class ContactController extends AbstractController
                 ->context([
                     'name' => $formContact->get('name')->getData(),
                     'message' => $formContact->get('message')->getData(),
+                    'sujet' => $formContact->get('sujet')->getData(),
+                    'piece_jointe' =>$formContact->get('piece_jointe')->getData(),
                 ])
             ;
 

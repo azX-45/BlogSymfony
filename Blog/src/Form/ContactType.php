@@ -4,6 +4,7 @@ namespace App\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -33,21 +34,39 @@ class ContactType extends AbstractType
                     'class' => 'form-control',
                 ],
             ])
+
             ->add('name', TextType::class, [
                 'attr' => [
                     'placeholder' => 'Nom',
                     'class' => 'form-control',
                 ],
             ])
+
             ->add('message', TextareaType::class, [
                 'attr' => [
                     'placeholder' => 'Message',
                     'class' => 'form-control',
                 ],
             ])
+
+            ->add('sujet', TextType::class, [
+                'attr' => [
+                    'placeholder' => 'Sujet',
+                    'class' => 'form-control',
+                ],
+            ])
+
+            ->add('piece_jointe', FileType::class, [
+                'attr' => [
+                    'placeholder' => 'Pièce jointe',
+                ],
+            ])
+
             ->add('submit', SubmitType::class, [ 
                 'label' => 'Envoyer'
             ]) 
+
+            
 
             
         ;
