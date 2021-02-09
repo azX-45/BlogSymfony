@@ -37,7 +37,7 @@ class ContactType extends AbstractType
 
             ->add('name', TextType::class, [
                 'attr' => [
-                    'placeholder' => 'Nom, Prénom',
+                    'placeholder' => 'Nom',
                     'class' => 'form-control',
                 ],
             ])
@@ -51,7 +51,7 @@ class ContactType extends AbstractType
 
             ->add('sujet', TextType::class, [
                 'attr' => [
-                    'placeholder' => 'Objet',
+                    'placeholder' => 'Sujet',
                     'class' => 'form-control',
                 ],
             ])
@@ -62,7 +62,6 @@ class ContactType extends AbstractType
                 ],
                 
             ]) 
-
             
 
             
