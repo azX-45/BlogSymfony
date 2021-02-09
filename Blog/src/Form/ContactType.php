@@ -37,7 +37,7 @@ class ContactType extends AbstractType
 
             ->add('name', TextType::class, [
                 'attr' => [
-                    'placeholder' => 'Nom',
+                    'placeholder' => 'Nom, Prénom',
                     'class' => 'form-control',
                 ],
             ])
@@ -51,19 +51,16 @@ class ContactType extends AbstractType
 
             ->add('sujet', TextType::class, [
                 'attr' => [
-                    'placeholder' => 'Sujet',
+                    'placeholder' => 'Objet',
                     'class' => 'form-control',
                 ],
             ])
 
-            ->add('piece_jointe', FileType::class, [
+            ->add('envoyer', SubmitType::class, [ 
                 'attr' => [
-                    'placeholder' => 'Pièce jointe',
+                    'class' => 'btn btn-primary',
                 ],
-            ])
-
-            ->add('submit', SubmitType::class, [ 
-                'label' => 'Envoyer'
+                
             ]) 
 
             

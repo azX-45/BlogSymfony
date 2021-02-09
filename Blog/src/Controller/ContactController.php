@@ -25,6 +25,7 @@ class ContactController extends AbstractController
 
         if ($formContact->isSubmitted() && $formContact->isValid()) {
             $email=(new TemplatedEmail())
+                ->subject('Demande de renseignement')
                 ->from(new Address($formContact->get('email')->getData()))
                 ->to('julienserodio45@gmail.com')
                 ->htmlTemplate('contact/contact_email.html.twig')
@@ -32,7 +33,6 @@ class ContactController extends AbstractController
                     'name' => $formContact->get('name')->getData(),
                     'message' => $formContact->get('message')->getData(),
                     'sujet' => $formContact->get('sujet')->getData(),
-                    'piece_jointe' =>$formContact->get('piece_jointe')->getData(),
                 ])
             ;
 

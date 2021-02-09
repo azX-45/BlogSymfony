@@ -24,14 +24,14 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('AdminCrud');
+            ->setTitle('Modération');
     }
 
     public function configureMenuItems(): iterable
     {
         
         yield MenuItem::linkToCrud('Utilisateur', 'fas fa-users', User::class);
-        yield MenuItem::linkToCrud('Article', 'fas fa-pen', Post::class);
+        yield MenuItem::linkToCrud('Article', 'fas fa-book', Post::class);
         yield MenuItem::linkToCrud('Commentaire', 'fas fa-pen', Comment::class);
     }
 }
