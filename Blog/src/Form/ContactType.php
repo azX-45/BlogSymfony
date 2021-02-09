@@ -56,15 +56,11 @@ class ContactType extends AbstractType
                 ],
             ])
 
-            ->add('envoyer', SubmitType::class, [ 
+            ->add('envoyer', SubmitType::class, [
                 'attr' => [
                     'class' => 'btn btn-primary',
                 ],
-                
-            ]) 
-            
 
-            
-        ;
+            ]);
     }
 }
