@@ -30,4 +30,4 @@ document.querySelector('form').addEventListener('submit', function (e) {
 });
 
 //Appel par defaut
-apiCall('Orléans');
+apiCall('Paris');
