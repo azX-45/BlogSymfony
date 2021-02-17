@@ -22,12 +22,15 @@ class CommentType extends AbstractType
         ])
         ->add('content', TextareaType::class, [
             'attr' => [
-                'class' => 'form-control'
+                'class' => 'form-control',
+                'placeholder' => 'Commentaire'
             ]
         ])
         ->add('submit', SubmitType::class, [
             'attr' => [
-                'class' => 'btn btn-primary'
+                'class' => 'btn btn-primary',
+                'label' => 'Envoyer',
+                
             ]
         ])
         ;
