@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Page non trouvée{% endblock %}
+
+{% block body %}
+<div class="home-header container-fluid mt-3 border-0">
+    <div class="row">
+        <div class="col-12 p-0">
+            <div id="header-text" class="text-center">
+                <h1>Page non trouvée</h1>
+                <h2>La page que vous cherchez n'existe pas (plus).</h2>
+                <p>Code de l'erreur : {{status_code}}</p>
+                <p><a class="text-blue" href="{{ path('home') }}">Retour à l'accueil</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
