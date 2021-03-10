@@ -56,7 +56,7 @@ class HomeController extends AbstractController
             'previous' => $offset - CommentRepository::PAGINATOR_PER_PAGE,
             'next' => min(count($paginator), $offset + CommentRepository::PAGINATOR_PER_PAGE),
             'post' => $post,
-            'form' => $form->createView()
+            'form' => $form->createView(),
         ]);
     }
 
