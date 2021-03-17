@@ -35,6 +35,7 @@ class ContactController extends AbstractController
                     'sujet' => $formContact->get('sujet')->getData(),
                 ])
             ;
+            $this->addFlash("success", "Votre message a bien été envoyé. Nous vous répondrons dans les meilleurs délais.");
 
             $mailer->send($email);      
 

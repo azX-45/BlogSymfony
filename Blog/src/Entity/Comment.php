@@ -20,13 +20,13 @@ class Comment
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\Blank
+     * @Assert\NotBlank(message="Veuillez saisir votre pseudo")
      */
     private $pseudo;
 
     /**
      * @ORM\Column(type="text")
-     * @Assert\Blank
+     * @Assert\NotBlank(message="Veuillez saisir votre commentaire")
      */
     private $content;
 
