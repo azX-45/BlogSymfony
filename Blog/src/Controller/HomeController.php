@@ -31,4 +31,24 @@ class HomeController extends AbstractController
 
     
 
+
+
+        $comment = new Comment();
+        $form = $this->createForm(CommentType::class, $comment);
+            
+            $comment->setCreatedAt(new \DateTime());
+            $comment->setPost($post);
+
+            $form->handleRequest($request);   
+
+        if($form->isSubmitted() && $form->isValid()){
+            $em->persist($comment);
+            $em->flush();
+        }
+
+        return $this->render('home/post.html.twig', [
+            'post' => $post,
+            'form' => $form->createView()
+        ]);
+    }
 }

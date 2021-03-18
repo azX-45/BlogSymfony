@@ -49,6 +49,7 @@ class ContactType extends AbstractType
                 ],
             ])
 
+
             ->add('sujet', TextType::class, [
                 'attr' => [
                     'placeholder' => 'Sujet',
@@ -64,3 +65,9 @@ class ContactType extends AbstractType
             ]);
     }
 }
+            ->add('submit', SubmitType::class, [ 
+                'label' => 'Envoyer'
+            ]);
+    }
+}
+
