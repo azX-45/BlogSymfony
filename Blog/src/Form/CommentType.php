@@ -17,15 +17,21 @@ class CommentType extends AbstractType
         $builder
         ->add('pseudo', TextType::class, [
             'attr' => [
-                'class' => 'form-control'
+                'class' => 'form-control',
+                'placeholder' => 'Nom'
             ]
         ])
+
         ->add('content', TextareaType::class, [
+            'label' => 'Message',
             'attr' => [
-                'class' => 'form-control'
+                'class' => 'form-control',
+                'placeholder' => 'Commentaire'
             ]
         ])
+
         ->add('submit', SubmitType::class, [
+            'label' => 'Envoyer',
             'attr' => [
                 'class' => 'btn btn-primary'
             ]

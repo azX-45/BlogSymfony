@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Accès refusé{% endblock %}
+
+{% block body %}
+<div class="home-header container-fluid mt-3 border-0">
+    <div class="row">
+        <div class="col-12 p-0">
+            <div id="header-text" class="text-center">
+                <h1>Accès refusé</h1>
+                <h2>Vous n'avez pas la permission d'accèder à cette page.</h2>
+                <p>Code de l'erreur : {{status_code}}</p>
+                <p><a class="text-blue" href="{{ path('home') }}">Retour à l'accueil</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
