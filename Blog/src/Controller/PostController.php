@@ -21,10 +21,10 @@ class PostController extends AbstractController
    */
   public function show(Post $post, Request $request, CommentRepository $commentRepository, EntityManagerInterface $em)
   {
-
+    
     $comment = new Comment();
     $form = $this->createForm(CommentType::class, $comment);
-
+    
     $comment->setCreatedAt(new \DateTime());
     $comment->setPost($post);
 

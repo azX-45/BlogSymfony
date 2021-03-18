@@ -20,35 +20,13 @@ class HomeController extends AbstractController
     /**
      * @Route("/", name="home")
      */
-    public function index(PostRepository $ripo)
+    public function index(PostRepository $postRepository)
     {
-        $posts = $ripo->findAll();
+        $posts = $postRepository->findAll();
 
         return $this->render('home/index.html.twig', [
-            'posts' => $posts
+            'posts' => $posts,
         ]);
-    }
-
     
-
-
-
-        $comment = new Comment();
-        $form = $this->createForm(CommentType::class, $comment);
-            
-            $comment->setCreatedAt(new \DateTime());
-            $comment->setPost($post);
-
-            $form->handleRequest($request);   
-
-        if($form->isSubmitted() && $form->isValid()){
-            $em->persist($comment);
-            $em->flush();
-        }
-
-        return $this->render('home/post.html.twig', [
-            'post' => $post,
-            'form' => $form->createView()
-        ]);
     }
 }
