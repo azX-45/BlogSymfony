@@ -44,9 +44,12 @@ class RegistrationController extends AbstractController
                 'main' // firewall name in security.yaml
             );
         }
+        
 
         return $this->render('registration/register.html.twig', [
             'registrationForm' => $form->createView(),
+            
         ]);
+        
     }
 }
