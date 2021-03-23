@@ -33,11 +33,13 @@ class CommentType extends AbstractType
         ->add('submit', SubmitType::class, [
             'label' => 'Envoyer',
             'attr' => [
-                'class' => 'btn btn-primary'
+                'class' => 'btn btn-primary mt-3'
             ]
         ])
         ;
+        
     }
+    
 
     public function configureOptions(OptionsResolver $resolver)
     {
