@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block body %}
-<br>
+	<br>
 	<div class="container">
 
 		<div class="row">
@@ -18,9 +18,13 @@
 			</div>
 		</div>
 		<div class='row'>
-			<div class=" offset-md-2 col-md-8 offset-sm-1 col-sm-10 mt-2 pb-3 card shadow bg-light mb-3">
-				{{ form(form) }}
-				</div>
+			{% if app.user %}
+				<div class=" offset-md-2 col-md-8 offset-sm-1 col-sm-10 mt-2 pb-3 card shadow bg-light mb-3">
+					{{ form(form) }}
+					</div>
+				{% else %}
+					<p>Connectez vous pour commenter</p>
+				{% endif %}
 				{% for comment in comments %}
 					<div class=" offset-md-2 col-md-8 offset-sm-1 col-sm-10 mt-3 pb-3 card shadow bg-light mb-3">
 						<div class="card-body ">
@@ -31,11 +35,25 @@
 					</div>
 
 				{% endfor %}
-
+				<nav aria-label="Page navigation example">
+					<ul class="pagination">
+					{% if previous >= 0 %}
+						<li class="page-item">
+							<a class="page-link" href="{{ path('show_post', {slug: post.slug, offset:previous}) }}">Précédent</a>
+						</li>
+					{% endif %}
+					{% if next < comments|length %}
+						<li class="page-item">
+							<a class="page-link" href="{{ path('show_post', {slug: post.slug, offset:next}) }}">Suivant</a>
+						</li>
+					{% endif %}
+					</ul>
+				</nav>
 			</div>
 		</div>
 
 	{% endblock %}
+
 
 
 
