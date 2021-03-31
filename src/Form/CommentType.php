@@ -33,7 +33,7 @@ class CommentType extends AbstractType
         ->add('submit', SubmitType::class, [
             'label' => 'Envoyer',
             'attr' => [
-                'class' => 'btn btn-primary mt-3'
+                'class' => 'btn btn-primary mt-2 mb-2'
             ]
         ])
         ;
