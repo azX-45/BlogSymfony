@@ -70,28 +70,28 @@
 }
 
 #registration_form_email {
-  padding: 5px 0px;
+  padding: 5px;
   border-radius: 4px;
   border: 1px solid #ccc;
   width: 97%;
 }
 
 #registration_form_firstName {
-  padding: 5px 0px;
+  padding: 5px;
   border-radius: 4px;
   border: 1px solid #ccc;
   width: 97%;
 }
 
 #registration_form_plainPassword {
-  padding: 5px 0px;
+  padding: 5px;
   border-radius: 4px;
   border: 1px solid #ccc;
   width: 97%;
 }
 
 #registration_form_lastName {
-  padding: 5px 0px;
+  padding: 5px;
   border-radius: 4px;
   border: 1px solid #ccc;
   width: 97%;
