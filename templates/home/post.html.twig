@@ -33,12 +33,12 @@
 					<ul class="pagination">
 					{% if previous >= 0 %}
 						<li class="page-item">
-							<a class="btn btn-primary" href="{{ path('show_post', {slug: post.slug, offset:previous}) }}">Précédent</a>
+							<a class="btn btn-primary mb-5 mt-2" href="{{ path('show_post', {slug: post.slug, offset:previous}) }}">Précédent</a>
 						</li>
 					{% endif %}
 					{% if next < comments|length %}
 						<li class="page-item">
-							<a class="btn btn-primary mb-5" href="{{ path('show_post', {slug: post.slug, offset:next}) }}">Suivant</a>
+							<a class="btn btn-primary mb-5 mt-2" href="{{ path('show_post', {slug: post.slug, offset:next}) }}">Suivant</a>
 						</li>
 					{% endif %}
 					</ul>
