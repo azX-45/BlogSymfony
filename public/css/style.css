@@ -1,7 +1,13 @@
+img{
+  width: 100%;
+  position: relative;
+}
 
-
-.col-lg-12 {
-  margin-top: -437px;
+h1{
+  position: absolute;
+  top: 38%;
+  left: 34%;
+  width: 28%;
 }
 
 #content {
@@ -21,6 +27,7 @@
   height: 100px;
   display: flex;
   flex-wrap: nowrap;
+  min-width: 240px;
 }
 
 .box {
@@ -31,10 +38,7 @@
   justify-content: center;
   align-items: center;
   color: white;
-}
-
-.d-flex {
-  margin-top: 422px;
+  font-size: 13px;
 }
 
 .col-sm-6 {
@@ -96,5 +100,3 @@
   border: 1px solid #ccc;
   width: 97%;
 }
-
-
