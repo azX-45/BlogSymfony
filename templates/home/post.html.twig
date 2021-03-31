@@ -1,57 +1,50 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Fish and Tips - Article
-{% endblock %}
-
+{% block title %}Fish and Tips - Article{% endblock %}
 {% block body %}
 	<br>
 	<div class="container">
-
 		<div class="row">
 			<div class=" offset-md-2 col-md-8 offset-sm-1 col-sm-10 mt-5 pb-3 card shadow bg-light mb-3">
 				<h1>{{post.title}}</h1>
 				<p class="card-text">{{post.content|raw}}</p>
 				<p>
 					{{post.createdAt | date("d/m/Y")}}</p>
-
 				<a class="btn btn-primary" href="/">Retour</a>
+				<a class="btn btn-primary mt-4" href="{{path('app_login')}}">Connectez vous pour commenter</a>
 			</div>
 		</div>
 		<div class='row'>
 			{% if app.user %}
-				<div class=" offset-md-2 col-md-8 offset-sm-1 col-sm-10 mt-2 pb-3 card shadow bg-light mb-3">
+				<div class="offset-md-2 col-md-8 mt-3 card shadow">
 					{{ form(form) }}
 					</div>
-				{% else %}
-					<p>Connectez vous pour commenter</p>
 				{% endif %}
 				{% for comment in comments %}
-					<div class=" offset-md-2 col-md-8 offset-sm-1 col-sm-10 mt-3 pb-3 card shadow bg-light mb-3">
+					<div class="offset-md-2 col-md-8 mt-3 card shadow">
 						<div class="card-body ">
 							<h5 class="card-title">{{comment.pseudo}}</h5>
 							<h6 class="card-subtittle mb-2 text-mutted">{{comment.createdAt | date('d/m/Y')}}</h6>
 							<p class="card-text">{{comment.content}}</p>
 						</div>
 					</div>
-
 				{% endfor %}
 				<nav aria-label="Page navigation example">
 					<ul class="pagination">
 					{% if previous >= 0 %}
 						<li class="page-item">
-							<a class="page-link" href="{{ path('show_post', {slug: post.slug, offset:previous}) }}">Précédent</a>
+							<a class="btn btn-primary" href="{{ path('show_post', {slug: post.slug, offset:previous}) }}">Précédent</a>
 						</li>
 					{% endif %}
 					{% if next < comments|length %}
 						<li class="page-item">
-							<a class="page-link" href="{{ path('show_post', {slug: post.slug, offset:next}) }}">Suivant</a>
+							<a class="btn btn-primary mb-5" href="{{ path('show_post', {slug: post.slug, offset:next}) }}">Suivant</a>
 						</li>
 					{% endif %}
 					</ul>
 				</nav>
 			</div>
 		</div>
-
 	{% endblock %}
 
 
