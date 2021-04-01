@@ -28,8 +28,13 @@ class PostCrudController extends AbstractCrudController
             TextareaField::new('intro', 'Introduction'),
             TextEditorField::new('content', 'Contenu'),
             DateField::new('createdAt', 'Crée le'),
-            SlugField::new('slug', 'label')->setTargetFieldName('title')->hideOnIndex(),
-            //ImageField::new('image')->setBasePath('uploads/images/post')
+            SlugField::new('slug', 'label')
+                ->setTargetFieldName('title')    
+                ->hideOnIndex(),
+            ImageField::new('image')
+                ->setBasePath('uploads/images/post')
+                ->setUploadDir('public/uploads/images/post')
+                ->setUploadedFileNamePattern('[contenthash].[extension]')
         ];
     }
 
