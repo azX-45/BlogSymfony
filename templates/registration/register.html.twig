@@ -6,9 +6,8 @@
     {% for flashError in app.flashes('verify_email_error') %}
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
-    <div class=" offset-md-2 col-md-8 offset-sm-1 col-sm-10 mt-6 pb-3 card shadow bg-light mb-3">
+    <div class=" offset-md-2 col-md-8 pb-3 card shadow">
     <h2>Créer un compte</h2>
-
         {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.plainPassword, {
@@ -20,10 +19,11 @@
         {{ form_row(registrationForm.lastName, {
             label: 'Nom'
         }) }}
-       
+        
         {{ form_row(registrationForm.agreeTerms, {
-            label: "Accepter les conditions générales d’inscription"
+            label: "Accepter les conditions générales d’inscription "
         }) }}
+        <a class="text-blue d-flex mb-2" href="../legalPage">Mention légales</a>
 
         <button type="submit" class="btn btn-lg btn-primary">Enregistrement</button>
     {{ form_end(registrationForm) }}
