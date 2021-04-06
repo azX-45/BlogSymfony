@@ -35,6 +35,15 @@ class SecurityController extends AbstractController
     {   
         throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
     }
+
+    /**
+     * @Route("/legalPage", name="app_legalPage")
+     */
+    public function legalPage()
+    {
+      return $this->render('security/legalPage.html.twig');
+
+      }
     
      
 }
