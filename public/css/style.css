@@ -10,6 +10,10 @@ h1{
   width: 28%;
 }
 
+.footer{
+  background-color:#343a40
+}
+
 #content {
   margin-top: 50px;
 }
