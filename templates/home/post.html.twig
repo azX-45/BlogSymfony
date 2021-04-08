@@ -11,7 +11,7 @@
 				<p>
 					{{post.createdAt | date("d/m/Y")}}</p>
 				<a class="btn btn-primary" href="/">Retour</a>
-				<a class="btn btn-primary mt-4" href="{{path('app_login')}}">Connectez vous pour commenter</a>
+				<a class="btn btn-warning mt-4" href="{{path('app_login')}}">Connectez vous pour commenter</a>
 			</div>
 		</div>
 		<div class='row'>
@@ -35,12 +35,12 @@
 			<ul class="pagination justify-content-center">
 				{% if previous >= 0 %}
 					<li class="page-item">
-						<a class="btn btn-secondary btn-lg mt-2" href="{{ path('show_post', {slug: post.slug, offset:previous}) }}">Précédent</a>
+						<a class="btn btn-dark btn-lg mt-2" href="{{ path('show_post', {slug: post.slug, offset:previous}) }}">Précédent</a>
 					</li>
 				{% endif %}
 				{% if next < comments|length %}
 					<li class="page-item">
-						<a class="btn btn-secondary btn-lg mt-2" href="{{ path('show_post', {slug: post.slug, offset:next}) }}">Suivant</a>
+						<a class="btn btn-dark btn-lg mt-2" href="{{ path('show_post', {slug: post.slug, offset:next}) }}">Suivant</a>
 					</li>
 				{% endif %}
 			</ul>
