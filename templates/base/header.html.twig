@@ -1,33 +1,32 @@
 <header class="bloc-page">
-		<nav id="navbar-example2" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-			<div class="container">
-				<a class="navbar-brand text-white text-uppercase" href="{{path('home')}}">Blog Fish and tips</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<ul class="nav collapse navbar-collapse flex-sm-column flex-md-row justify-content-md-end align-items-sm-start" id="navbarToggler">
+	<nav id="navbar-example2" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+		<div class="container">
+			<a class="navbar-brand text-white text-uppercase" href="{{path('home')}}">Blog Fish and tips</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<ul class="nav collapse navbar-collapse flex-sm-column flex-md-row justify-content-md-end align-items-sm-start" id="navbarToggler">
+				<li class="nav-item">
+					<a class="nav-link text-white text-uppercase" href="{{path('home')}}">Accueil</a>
+				</li>
+				{% if is_granted('ROLE_ADMIN') %}
 					<li class="nav-item">
-						<a class="nav-link text-white text-uppercase" href="{{path('home')}}">Accueil</a>
+						<a class="nav-link text-white text-uppercase" href="../admin?crudAction=index&crudControllerFqcn=App%5CController%5CAdmin%5CPostCrudController&menuIndex=2&signature=Z8jcUQNcPDfTFdzBlwFdYk7mc4VA8dSBUT2-Ls1dgFg&submenuIndex=-1">Administration</a>
 					</li>
-					{% if is_granted('ROLE_ADMIN') %}
-						<li class="nav-item">
-							<a class="nav-link text-white text-uppercase" href="../admin?crudAction=index&crudControllerFqcn=App%5CController%5CAdmin%5CPostCrudController&menuIndex=2&signature=Z8jcUQNcPDfTFdzBlwFdYk7mc4VA8dSBUT2-Ls1dgFg&submenuIndex=-1">Administration</a>
-						</li>
+				{% endif %}
+				{% if app.user %}
+					<li class="nav-item">
+						<a class="nav-link text-white text-uppercase" href="{{path('app_logout')}}">Déconnexion</a>
+					</li>
+				{% else %}
+					<li class="nav-item">
+						<a class="nav-link text-white text-uppercase" href="../register">Inscription</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white text-uppercase" href="{{path('app_login')}}">Connexion</a>
+					</li>
+					<li class="nav-item">
 					{% endif %}
-					{% if app.user %}
-						<li class="nav-item">
-							<a class="nav-link text-white text-uppercase" href="{{path('app_logout')}}">Déconnexion</a>
-						</li>
-					{% else %}
-						<li class="nav-item">
-							<a class="nav-link text-white text-uppercase" href="../register">Inscription</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white text-uppercase" href="{{path('app_login')}}">Connexion</a>
-						</li>
-						<li class="nav-item">
-
-						{% endif %}
 				</ul>
 			</div>
 		</nav>
