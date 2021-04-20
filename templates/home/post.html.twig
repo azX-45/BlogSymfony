@@ -1,12 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Fish and Tips - Article
-{% endblock %}
+{% block title %}Fish and Tips - Article{% endblock %}
 {% block body %}
-	<br>
+	
 	<div class="container">
-		<div class="row">
-			<div class=" offset-md-2 col-md-8 offset-sm-1 col-sm-10 mt-5 pb-3 card shadow bg-light mb-3">
+		<div class="row mt-4">
+			<div class="offset-md-2 col-md-8 offset-sm-1 col-sm-10 mt-5 pb-3 card shadow bg-light mb-3">
 				<h1>{{post.title}}</h1>
 				<p class="card-text">{{post.content|raw}}</p>
 				<p>
@@ -46,6 +45,7 @@
 				{% endif %}
 			</ul>
 		</nav>
+
 	{% endblock %}
 
 
